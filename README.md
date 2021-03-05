@@ -11,7 +11,7 @@ RECKO - React + Docker + Makefile
 
 # Getting Started
 
-These instructions will cover usage information and for the docker container:
+These instructions will cover usage information:
 
 ## Prerequisities
 
@@ -63,4 +63,4 @@ make devstop
 
 # Author ✒️
 
-* **Marcos Rodríguez** - *Progamming and Documentation* - [Github](https://github.com/mark-doblefilo) - [Twitter](https://twitter.com/mark_doblefilo) - [Linkedin](https://www.linkedin.com/in/marcos-rodr%C3%ADguez-8b1441195/)
+* **Marcos Rodríguez** - *Programming and Documentation* - [Github](https://github.com/mark-doblefilo) - [Twitter](https://twitter.com/mark_doblefilo) - [Linkedin](https://www.linkedin.com/in/marcos-rodr%C3%ADguez-8b1441195/)
