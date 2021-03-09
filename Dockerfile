@@ -14,7 +14,8 @@ RUN npm install --silent
 RUN npm install react-scripts@3.4.1 -g --silent
 
 # Adding to app
-COPY . ./
+COPY check-react.sh ./
 
 # Starting app
-CMD ["npm", "start"]
+RUN chmod +x /app/check-react.sh
+CMD ["sh", "/app/check-react.sh"]

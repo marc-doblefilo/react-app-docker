@@ -3,7 +3,7 @@ version: '3.7'
 services:
         react-server-docker:
                 container_name: react
-                image: markdoblefilo/react-server-docker:1.0
+                image: markdoblefilo/react-server-docker:test
                 volumes:
                         - '.:/app'
                         - '/app/node_modules'
