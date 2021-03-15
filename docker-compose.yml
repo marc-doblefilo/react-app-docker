@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-        react-server-docker:
+        react-dev:
                 container_name: react
                 image: markdoblefilo/react-server-docker:test
                 volumes:

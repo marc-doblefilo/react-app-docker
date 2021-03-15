@@ -33,7 +33,7 @@ build:
 dev:
 	@docker-compose up -d --build
 	@echo -e "\n\n"
-	@echo -e "\e[0;41m[DEV]\e[0m ${RED}${IMAGE_NAME}${RESET} is ${GREEN}up${RESET}. Try it: ${GREEN}localhost:3005${RESET}"
+	@echo -e "\e[0;41m[DEV]\e[0m ${RED}${IMAGE_NAME}${RESET} is ${GREEN}up${RESET}. Try it: ${GREEN}localhost:3000${RESET}"
 
 stopdev:
 	@docker-compose stop ${SERVICE_NAME}
