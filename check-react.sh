@@ -2,6 +2,7 @@
 
 package='create-react-app'
 response='n'
+project_name=''
 
 error_react_not_found() {
 	echo -e "\n"
@@ -30,8 +31,8 @@ ask_create_react() {
 }
 
 check_package() {
-	if [`npm list -g | grep -c $package` -eq 1 -o ! -d node_modul -o ! -d node_module ]; then
-		echo -e "create-react-app not found. "
+	if [ `npm list -g | grep -c $package` == 0 ]; then
+		echo -e "[1;31m[ ERROR ]\e[m create-react-app not found. "
 		exit 1	
 	else
 		echo -e "\e[1;32m[ OK ]\e[m create-react-app package found. "
@@ -40,7 +41,13 @@ check_package() {
 }
 
 create_react_app() {
-	echo "Working"
+	read -r -p "Name for your project: " project_name
+	if [ -z "$project_name" ]; then
+		echo -e "NOPE"
+		exit 1
+	else
+		eval `npx create-react-app $project_name`
+	fi
 }
 
 main
