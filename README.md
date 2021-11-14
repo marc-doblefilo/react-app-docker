@@ -63,4 +63,4 @@ make devstop
 
 # Author ✒️
 
-* **Marcos Rodríguez** - *Programming and Documentation* - [Github](https://github.com/mark-doblefilo) - [Twitter](https://twitter.com/mark_doblefilo) - [Linkedin](https://www.linkedin.com/in/marcos-rodr%C3%ADguez-8b1441195/)
+* **Marc Rodríguez** - *Programming and Documentation* - [Github](https://github.com/mark-doblefilo) - [Twitter](https://twitter.com/mark_doblefilo) - [Linkedin](https://www.linkedin.com/in/marcos-rodr%C3%ADguez-8b1441195/)
