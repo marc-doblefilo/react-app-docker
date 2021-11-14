@@ -1,14 +1,16 @@
 version: '3.7'
 
 services:
-        react-server-docker:
+        react-app-docker:
                 container_name: react
-                image: markdoblefilo/react-server-docker:test
+                build: 
+                        dockerfile: Dockerfile
+                        context: .
                 volumes:
                         - '.:/app'
                         - '/app/node_modules'
                 ports:
-                        - 3000:3000
+                        - "${HOST_PORT}:${PORT}"
                 environment:
                         - CHOKIDAR_USERPOLLING=true
 

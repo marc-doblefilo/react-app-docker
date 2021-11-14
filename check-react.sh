@@ -2,7 +2,7 @@
 
 error_message() {
 	echo -e "\n"
-	echo -e "\e[1;31m[ ERROR ]\e[m React app not found. Check: https://github.com/mark-doblefilo/react-server-docker"
+	echo -e "\e[1;31m[ ERROR ]\e[m React app not found. Check: https://github.com/mark-doblefilo/react-app-docker"
 	echo -e "\n"
 	exit 1
 }

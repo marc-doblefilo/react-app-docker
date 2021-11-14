@@ -1,7 +1,10 @@
 IMAGE_NAME := react-server-docker
-SERVICE_NAME := react-dev
+SERVICE_DEV_NAME := react-app-docker
+
 .PHONY: dev devstop
 SHELL=/bin/bash
+include .env
+export
 
 ifneq (,$(findstring xterm,${TERM}))
 	BLACK        := $(shell tput -Txterm setaf 0)
@@ -27,15 +30,17 @@ endif
 
 build:
 	@docker-compose build
-	@echo -e "\n\n"
+	@echo -e "\n"
 	@echo "${RED}${IMAGE_NAME}${RESET} is ${GREEN}BUILT${RESET}."
 
 dev:
+	@set -a
+	@source .env
 	@docker-compose up -d --build
-	@echo -e "\n\n"
-	@echo -e "\e[0;41m[DEV]\e[0m ${RED}${IMAGE_NAME}${RESET} is ${GREEN}up${RESET}. Try it: ${GREEN}localhost:3005${RESET}"
+	@echo -e "\n"
+	@echo -e "\e[0;41m[DEV]\e[0m ${RED}${IMAGE_NAME}${RESET} is ${GREEN}up${RESET}. Try it: ${GREEN}${HOSTNAME}:${HOST_PORT}${RESET}"
 
 stopdev:
-	@docker-compose stop ${SERVICE_NAME}
-	@echo -e "\n\n"
+	@docker-compose stop ${SERVICE_DEV_NAME}
+	@echo -e "\n"
 	@echo -e "\e[0;41m[DEV]\e[0m ${RED}${IMAGE_NAME}${RESET} is ${RED}down${RESET}."
